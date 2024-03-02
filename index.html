@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Novel Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Light Novel Tracker</h1>
+    <input type="text" id="novelTitle" placeholder="Novel Title" />
+    <input type="number" id="novelChapter" placeholder="Current Chapter" />
+    <button onclick="addOrUpdateNovel()">Add/Update</button>
+    <button onclick="displayNovelList()">Display List</button>
+    <input type="file" id="fileInput" />
+    <button onclick="loadData()">Load Data</button>
+    <button onclick="downloadList()">Download List</button>
+    <div id="novelList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
