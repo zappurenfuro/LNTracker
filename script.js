@@ -20,7 +20,7 @@ function addOrUpdateNovel(title, chapter) {
 }
 
 function deleteNovel(title) {
-    let novelList = getnovelList();
+    let novelList = getNovelList();
     novelList = novelList.filter(novel => novel.title !== title);
     localStorage.setItem('novelList', JSON.stringify(novelList));
     displayNovelList();  // Refresh the list display
