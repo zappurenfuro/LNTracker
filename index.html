@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Light Novel Tracker</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Light Novel Tracker</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
     <h1>Light Novel Tracker</h1>
-    <input type="text" id="novelTitle" placeholder="Novel Title" />
-    <input type="number" id="novelChapter" placeholder="Current Chapter" />
-    <button onclick="addOrUpdateNovel()">Add/Update</button>
-    <button onclick="displayNovelList()">Display List</button>
-    <input type="file" id="fileInput" />
-    <button onclick="loadData()">Load Data</button>
-    <button onclick="downloadList()">Download List</button>
-    <div id="novelList"></div>
-
-    <script src="script.js"></script>
+    <div class="file-controls">
+      <label for="fileInput" class="file-input-label">
+        <span>Choose File</span>
+        <input type="file" id="fileInput" accept=".txt">
+      </label>
+      <button id="loadBtn" class="btn">Load</button>
+      <button id="sortBtn" class="btn">Sort</button>
+      <button id="downloadBtn" class="btn">Download</button>
+      <button id="backupBtn" class="btn">Backup</button>
+    </div>
+    <div class="add-entry">
+      <input type="text" id="newEntryInput" placeholder="Enter new manga title">
+      <button id="addEntryBtn" class="btn">Add</button>
+    </div>
+    <ul id="novelList"></ul>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
